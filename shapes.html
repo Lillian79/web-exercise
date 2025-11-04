@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circle and Rectangle</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="300" style="border:1px solid #000;"></canvas>
+
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Draw rectangle (blue)
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(50, 80, 200, 120);
+
+    // Draw circle (yellow with red border)
+    ctx.beginPath();
+    ctx.arc(200, 140, 60, 0, 2 * Math.PI);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
+  </script>
+</body>
+</html>
